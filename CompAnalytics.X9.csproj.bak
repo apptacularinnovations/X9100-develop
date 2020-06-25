@@ -41,6 +41,9 @@
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\companalytics.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="CompAnalytics.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=792cfbd70dcd13a9, processorArchitecture=MSIL">
       <HintPath>packages\CompAnalytics.Contracts.1.0.1\lib\net45\CompAnalytics.Contracts.dll</HintPath>
