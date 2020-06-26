@@ -37,7 +37,7 @@ namespace X937FormApp
             CLHDR.Close();
             BHDR.Close();
             ChkDR.Close();
-            string outFilePath = @"C:\Temp\example2.x9";
+            string outFilePath = @"C:\Temp\example3.x9";
             using (X9Writer writer = new X9Writer(doc))
             using (MemoryStream byteStream = new MemoryStream(writer.WriteX9Document()))
             using (FileStream x9FileStream = File.Create(outFilePath))
@@ -50,6 +50,19 @@ namespace X937FormApp
             CN.Close();
             CN.Dispose();
             lblResult.Text = "Completed";
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string path = @"C:\Temp\testbrinks.x9";
+            DirectoryInfo imageOutDir = new DirectoryInfo(@"C:\Temp\SampleCheckImages");
+            using (Stream x9File = File.OpenRead(path))
+            using (X9Reader reader = new X9Reader(x9File))
+            {
+                X9Document doc = reader.ReadX9Document();
+                reader.WriteImagesToDisk(imageOutDir);
+            }
+            lblResult.Text = "Images Exported";
         }
     }
 }

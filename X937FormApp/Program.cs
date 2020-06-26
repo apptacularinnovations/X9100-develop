@@ -57,7 +57,7 @@ namespace X937FormApp
                 doc.Header.FileIdModifier.SetValue(1);
                 doc.Header.CountryCode.SetValue(HDR["FHCountryCode"].ToString());
                 doc.Header.UserField.SetValue(HDR["FHUserData"].ToString());
-                doc.Header.CompanionDocumentVersionIndicator.SetValue(1);
+                //doc.Header.CompanionDocumentVersionIndicator.SetValue(1);
 
                 // Create a single deposit
                 var dep = new X9Deposit
