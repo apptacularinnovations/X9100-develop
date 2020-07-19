@@ -37,7 +37,7 @@ namespace X937FormApp
             CLHDR.Close();
             BHDR.Close();
             ChkDR.Close();
-            string outFilePath = @"C:\Temp\example3.x9";
+            string outFilePath = @"C:\Temp\example4.x9";
             using (X9Writer writer = new X9Writer(doc))
             using (MemoryStream byteStream = new MemoryStream(writer.WriteX9Document()))
             using (FileStream x9FileStream = File.Create(outFilePath))
